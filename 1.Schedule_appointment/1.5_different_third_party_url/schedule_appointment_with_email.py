@@ -100,7 +100,7 @@ if __name__ == "__main__":
     client_secret = "YOUR_CLIENT_SECRET"
     tenant_id = "YOUR_TENANT_ID"
 
-    meeting_type = input("Enter meeting type: ")
+    meeting_type = "Input meeting type"
 
     recipients = [
         {"email": "recipient1@example.com", "name": "Recipient 1"},
