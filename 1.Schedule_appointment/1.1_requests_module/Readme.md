@@ -47,3 +47,4 @@ python schedule_appointment.py
 
 - If you encounter any issues or errors, please check your Azure Active Directory settings, permissions, and ensure the provided credentials are correct.
 - For more information about the Microsoft Graph API and Microsoft Bookings, refer to the [Microsoft Graph API documentation](https://docs.microsoft.com/en-us/graph/api/overview?view=graph-rest-beta).
+This README.md file provides instructions on how to use the Python script, prerequisites, usage steps, and additional information about the Microsoft Graph API and Microsoft Bookings. You can include more details or customize it further based on your requirements.
