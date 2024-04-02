@@ -37,3 +37,9 @@ This Python script demonstrates how to use a refresh token to obtain a new acces
     "id_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJhdWQiOiJodHRwczovL2dyb3Vwcy5taWNyb3NvZnRvbmxpbmUuY29tLyIsImlzcyI6Imh0dHBzOi8vbG9jYWxob3N0OjQ0MzUxLyIsImV4cCI6MTU3MzEwMjYxNSwiaWF0IjoxNTczMTAwNjE1LCJub25jZSI6IjU1ZDBl"
 }
 ```
+
+The value of the expires_in key represents the expiration time of the access token in seconds. It indicates the period for which the access token is valid before it expires.
+
+For example, if the value of expires_in is 3600, it means that the access token is valid for 3600 seconds, which is equivalent to 1 hour. After this period elapses, the access token expires, and you would need to obtain a new one using a refresh token or by re-authenticating the user, depending on your authentication flow.
+
+It's important to handle token expiration properly in your application to ensure uninterrupted access to protected resources and to maintain security by regularly refreshing tokens as needed.
