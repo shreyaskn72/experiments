@@ -1,0 +1,64 @@
+{
+	"info": {
+		"_postman_id": "5b2b9fdf-aee3-4dee-8fa1-c99ff36d0ad1",
+		"name": "create_download_delete_api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12638459"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:5000/create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"content\":\"hello\",\r\n    \"filename\" : \"dummy5.txt\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/create",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:5000/download/dummy5.txt",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/download/dummy5.txt",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"download",
+						"dummy5.txt"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
