@@ -1,6 +1,7 @@
 import requests
 import webbrowser
 import json
+from urllib.parse import urlencode
 
 # Azure AD Tenant ID
 TENANT_ID = 'your_tenant_id'
@@ -20,7 +21,8 @@ auth_params = {
     'response_type': 'code',
     'scope': SCOPE
 }
-auth_url = f"{AUTH_URL}?{'&'.join([f'{key}={value}' for key, value in auth_params.items()])}"
+
+auth_url = AUTH_URL + '?' + urlencode(auth_params)
 
 print("Please open the following URL in your browser to login and authorize the application:")
 print(auth_url)
