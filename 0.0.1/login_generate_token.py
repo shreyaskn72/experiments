@@ -10,7 +10,7 @@ TENANT_ID = 'your_tenant_id'
 CLIENT_ID = 'your_client_id'
 CLIENT_SECRET = 'your_client_secret'
 REDIRECT_URI = 'http://localhost:8080'  # Redirect URI configured in Azure portal
-SCOPE = 'https://graph.microsoft.com/.default'  # Scope for Microsoft Graph API
+SCOPE = 'https://graph.microsoft.com/.default offline_access'  # Scope for Microsoft Graph API with offline_access
 AUTH_URL = f'https://login.microsoftonline.com/{TENANT_ID}/oauth2/v2.0/authorize'
 TOKEN_URL = f'https://login.microsoftonline.com/{TENANT_ID}/oauth2/v2.0/token'
 
@@ -22,6 +22,7 @@ auth_params = {
     'scope': SCOPE
 }
 
+# Construct the authorization URL
 auth_url = AUTH_URL + '?' + urlencode(auth_params)
 
 print("Please open the following URL in your browser to login and authorize the application:")
@@ -30,7 +31,7 @@ webbrowser.open(auth_url)
 
 authorization_code = input("Enter the authorization code from the URL redirect: ")
 
-# Step 2: Exchange Authorization Code for Access Token
+# Step 2: Exchange Authorization Code for Access Token and Refresh Token
 token_data = {
     'client_id': CLIENT_ID,
     'client_secret': CLIENT_SECRET,
