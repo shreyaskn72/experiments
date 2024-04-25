@@ -11,7 +11,7 @@ SCOPE = 'https://graph.microsoft.com/.default offline_access'  # Scope for Micro
 TOKEN_URL = f'https://login.microsoftonline.com/{TENANT_ID}/oauth2/v2.0/token'
 
 # Refresh token obtained earlier
-REFRESH_TOKEN = input('Enter refresh token here')
+REFRESH_TOKEN = input('Enter refresh token here ')
 
 # Step 1: Exchange Refresh Token for New Access Token
 token_data = {
