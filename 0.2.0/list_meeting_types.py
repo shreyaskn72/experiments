@@ -3,6 +3,8 @@ import requests
 # Microsoft Bookings API endpoint
 BOOKINGS_API_URL = 'https://graph.microsoft.com/v1.0/me/bookings'
 
+# SCOPE = 'https://graph.microsoft.com/.default offline_access BookingsAppointment.Read.All'
+
 # Access token obtained earlier
 ACCESS_TOKEN = 'your_access_token_here'
 
