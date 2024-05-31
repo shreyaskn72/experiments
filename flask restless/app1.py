@@ -24,7 +24,7 @@ def escape_html_tags(mapper, connection, target):
     target.description = html.escape(target.description)
 
 manager = APIManager(app, flask_sqlalchemy_db=db)
-manager.create_api(Product, methods=['GET', 'POST', 'PUT', 'DELETE'])
+manager.create_api(Product, collection_name="product_details", methods=['GET', 'POST', 'PUT', 'DELETE'])
 
 if __name__ == '__main__':
     app.run(debug=True)
